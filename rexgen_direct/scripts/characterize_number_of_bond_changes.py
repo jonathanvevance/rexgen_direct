@@ -9,7 +9,8 @@ This script looks at how many bond changes actually occur in forward reactions (
 
 def process_file(fpath):
     counter = defaultdict(int)
-    with open(fpath, 'r') as fid_in, open(fpath + '.proc', 'w') as fid_out:
+    # with open(fpath, 'r') as fid_in, open(fpath + '.proc', 'w') as fid_out:
+    with open(fpath, 'r') as fid_in:
         for line in fid_in:
             edits = line.strip().split(' ')[1]
             counter[edits.count(';')] += 1
