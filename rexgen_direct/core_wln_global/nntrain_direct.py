@@ -111,7 +111,7 @@ _, topk = tf.nn.top_k(score - bmask, k=NK)
 flat_score = tf.reshape(score, [-1])
 
 # Train with categorical crossentropy
-loss = tf.nn.sigmoid_cross_entropy_with_logits(flat_score, tf.to_float(flat_label))
+loss = tf.nn.sigmoid_cross_entropy_with_logits(logits = flat_score, labels = tf.to_float(flat_label))
 loss = tf.reduce_sum(loss * bond_mask)
 
 # Use Adam with clipped gradients
