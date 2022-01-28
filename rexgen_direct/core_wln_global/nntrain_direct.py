@@ -10,6 +10,7 @@ from optparse import OptionParser
 from functools import partial
 import threading
 from multiprocessing import Queue
+from functools import reduce
 
 '''
 Script for training the core finder model
