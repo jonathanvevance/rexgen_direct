@@ -8,6 +8,7 @@ from optparse import OptionParser
 import threading
 from multiprocessing import Queue, Pool
 import time
+from functools import reduce
 
 '''
 Script for training the cand ranker model

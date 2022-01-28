@@ -10,6 +10,7 @@ from functools import partial
 import threading
 from multiprocessing import Queue
 import os
+from functools import reduce
 
 '''
 Script for testing the core finder model and outputting predictions.

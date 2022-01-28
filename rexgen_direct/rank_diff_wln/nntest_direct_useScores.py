@@ -10,6 +10,7 @@ from multiprocessing import Queue, Pool
 import time
 import rdkit.Chem as Chem
 import os
+from functools import reduce
 
 
 parser = OptionParser()
