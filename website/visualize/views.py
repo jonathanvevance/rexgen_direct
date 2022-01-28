@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from .data import do_index
+from data import do_index
 import base64
 from io import BytesIO
 import json 

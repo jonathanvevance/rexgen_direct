@@ -1,9 +1,9 @@
 from __future__ import print_function
 import tensorflow as tf
-from .nn import linearND, linear
-from .mol_graph import atom_fdim as adim, bond_fdim as bdim, max_nb, smiles2graph_list as _s2g
-from .models import *
-from .ioutils_direct import *
+from nn import linearND, linear
+from mol_graph import atom_fdim as adim, bond_fdim as bdim, max_nb, smiles2graph_list as _s2g
+from models import *
+from ioutils_direct import *
 import math, sys, random
 from collections import Counter
 from optparse import OptionParser
@@ -37,9 +37,9 @@ hidden_size = int(opts.hidden_size)
 depth = int(opts.depth)
 max_norm = float(opts.max_norm)
 if opts.rich_feat:
-    from .mol_graph_rich import atom_fdim as adim, bond_fdim as bdim, max_nb, smiles2graph_list as _s2g
+    from mol_graph_rich import atom_fdim as adim, bond_fdim as bdim, max_nb, smiles2graph_list as _s2g
 else:
-    from .mol_graph import atom_fdim as adim, bond_fdim as bdim, max_nb, smiles2graph_list as _s2g
+    from mol_graph import atom_fdim as adim, bond_fdim as bdim, max_nb, smiles2graph_list as _s2g
 
 smiles2graph_batch = partial(_s2g, idxfunc=lambda x:x.GetIntProp('molAtomMapNumber') - 1)
 
